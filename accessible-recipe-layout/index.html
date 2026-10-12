@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A recipe with accessible serving controls and scaled ingredient quantities.">
+  <title>Tomato Pasta — Accessible Recipe</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to recipe</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">EVERYDAY KITCHEN</p>
+      <p class="site-title">Simple food, made well.</p>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="recipe-intro" aria-labelledby="recipe-title">
+      <p class="eyebrow">WEEKDAY FAVOURITE · 30 MIN</p>
+      <h1 id="recipe-title">Tomato &amp; Basil Pasta</h1>
+      <p class="intro-copy">A quick, comforting pasta with garlic, sweet tomatoes, and fresh basil.</p>
+      <div class="recipe-meta" aria-label="Recipe details">
+        <span><strong>Prep:</strong> 10 min</span>
+        <span><strong>Cook:</strong> 20 min</span>
+        <span><strong>Difficulty:</strong> Easy</span>
+      </div>
+    </section>
+
+    <nav class="section-nav" aria-label="Recipe sections">
+      <a href="#ingredients">Ingredients</a>
+      <a href="#method">Method</a>
+    </nav>
+
+    <div class="recipe-grid">
+      <section id="ingredients" class="panel ingredients-panel" aria-labelledby="ingredients-title">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT YOU NEED</p>
+          <h2 id="ingredients-title">Ingredients</h2>
+        </div>
+
+        <div class="servings-control">
+          <label for="servings">Servings</label>
+          <div class="servings-stepper">
+            <button type="button" class="step-button" id="decrease-servings" aria-label="Decrease servings">−</button>
+            <input id="servings" name="servings" type="number" min="1" max="12" step="1" value="2" inputmode="numeric">
+            <button type="button" class="step-button" id="increase-servings" aria-label="Increase servings">+</button>
+          </div>
+        </div>
+
+        <p id="quantity-status" class="status-message" role="status" aria-live="polite" aria-atomic="true">Ingredient quantities shown for 2 servings.</p>
+
+        <ul class="ingredient-list">
+          <li><span class="quantity" data-base="180" data-unit="g">180 g</span> dried pasta</li>
+          <li><span class="quantity" data-base="250" data-unit="g">250 g</span> ripe cherry tomatoes</li>
+          <li><span class="quantity" data-base="2" data-unit="cloves">2 cloves</span> garlic, thinly sliced</li>
+          <li><span class="quantity" data-base="1" data-unit="tbsp">1 tbsp</span> olive oil</li>
+          <li><span class="quantity" data-base="20" data-unit="g">20 g</span> fresh basil leaves</li>
+          <li><span class="quantity" data-base="30" data-unit="g">30 g</span> grated Parmesan (optional)</li>
+          <li><span class="quantity" data-base="0.5" data-unit="tsp">½ tsp</span> salt, plus more for pasta water</li>
+          <li><span class="quantity" data-base="0.25" data-unit="tsp">¼ tsp</span> black pepper</li>
+        </ul>
+        <p class="small-note">Tip: keep a mug of pasta water before draining.</p>
+      </section>
+
+      <section id="method" class="panel method-panel" aria-labelledby="method-title">
+        <div class="section-heading">
+          <p class="eyebrow">LET'S COOK</p>
+          <h2 id="method-title">Method</h2>
+        </div>
+        <ol class="method-list">
+          <li>
+            <h3>Cook the pasta</h3>
+            <p>Bring a large pot of salted water to a boil. Cook the pasta according to the packet instructions until just al dente. Reserve a mug of pasta water, then drain.</p>
+          </li>
+          <li>
+            <h3>Soften the garlic</h3>
+            <p>While the pasta cooks, warm the olive oil in a large pan over medium-low heat. Add the sliced garlic and cook for about one minute, without letting it brown.</p>
+          </li>
+          <li>
+            <h3>Make the tomato sauce</h3>
+            <p>Add the tomatoes and cook for 8–10 minutes, stirring occasionally, until they soften and release their juices. Gently press a few tomatoes with the back of a spoon.</p>
+          </li>
+          <li>
+            <h3>Combine and season</h3>
+            <p>Add the drained pasta, basil, salt, and pepper. Toss well, adding a splash of reserved pasta water until the sauce coats the pasta.</p>
+          </li>
+          <li>
+            <h3>Serve</h3>
+            <p>Divide between bowls and finish with Parmesan, if using. Serve while hot.</p>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made for clear reading, keyboard access, and flexible serving sizes.</p>
+  </footer>
+</body>
+</html>
